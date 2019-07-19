@@ -1,4 +1,4 @@
-const db = require('../data./data-config.js')
+const db = require('../data/db-config.js')
 
 module.exports = {
     find,
@@ -19,7 +19,7 @@ function findById(id) {
         .where({ id })
         .first()
         .then(project => {
-            if(prokect) {
+            if(project) {
                 return project;
             } else {
                 return null;
